@@ -13,7 +13,6 @@ body{
             height: 20em;
         }
         h1{
-            //margin: 0.5em 0em;
             text-align: center;
             font-weight: $fontbold;
             font-size: $fontsize;
@@ -21,10 +20,9 @@ body{
         }
         p{
             text-align: center;
-            width: 90%;
-            font-size: 1em;
+            font-size: 16px;
+            width: 92%;
             line-height: 1.5em;
-            //margin: 0 auto;
             color: $grey;
         }
         a{
