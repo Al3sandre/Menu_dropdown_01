@@ -1,0 +1,14 @@
+//variables
+@import './variables/varibales.scss';
+
+// Base
+@import './base/reset',
+        './base/font',
+        './base/base';
+// Components
+@import './components/layouts/header',
+        './components/layouts/footer';
+
+// Page
+@import './components/pages/_home.scss';
+

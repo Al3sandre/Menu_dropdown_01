@@ -25,5 +25,5 @@ design
 #Parcel
 integration/dist
 integration/.parcel-cache
-
+integration/node_modules
 

@@ -1,0 +1,16 @@
+body{
+    header{
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+        .menu{
+            background-image: url('../images/icon-menu.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 18px;
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

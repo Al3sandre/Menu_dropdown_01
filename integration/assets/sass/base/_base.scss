@@ -1,0 +1,6 @@
+body{
+    font-family: $fontmain;
+    height: 100vh;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+}

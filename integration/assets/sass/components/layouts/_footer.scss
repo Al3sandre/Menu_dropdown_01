@@ -1,0 +1,22 @@
+body{
+    footer{
+        margin-top: 3em;
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            li{
+                list-style: none;
+                img{
+                    width: 75px;
+                }
+                &:nth-child(2){
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
