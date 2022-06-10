@@ -6,11 +6,21 @@ body{
             justify-content: space-around;
             align-items: center;
             padding: 0;
+            @include respond-to('desktop'){
+               justify-content: flex-start;
+               gap: 40px;
+               position: absolute;
+               top: 850px;
+               left: 200px;
+               }
             li{
                 list-style: none;
                 img{
                     width: 75px;
+                    @include respond-to('desktop'){
+                    width: 100px;
                 }
+            }
                 &:nth-child(2){
                     img{
                         width: 50px;

@@ -3,6 +3,14 @@ body{
         display: flex;
         justify-content: space-between;
         margin: 1em;
+        @include respond-to('desktop'){
+            align-items: center;
+        }
+        .brand{
+            @include respond-to('desktop'){
+               margin-right: 10px;
+             }
+        }
         .menu{
             background-image: url('../images/icon-menu.svg');
             background-size: contain;

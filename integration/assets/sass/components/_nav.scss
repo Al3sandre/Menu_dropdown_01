@@ -1,5 +1,10 @@
 body {
     header {
+        .menu{
+            @include respond-to('desktop'){
+                display: none;
+            }
+        }
         .nav {
             position: absolute;
             background-color: rgba(3, 3, 3, 0.631);
@@ -7,6 +12,12 @@ body {
             height: 100%;
             right: 0px;
             top: 0px;
+            @include respond-to('desktop'){
+                position: inherit;
+                background-color: transparent;
+                font-size: 0.8em;
+                font-weight: 700;
+            }
 
             nav {
                 position: absolute;
@@ -15,11 +26,23 @@ body {
                 height: 100%;
                 right: 0px;
                 top: 0px;
+                @include respond-to('desktop'){
+                    position:inherit;
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: flex-start;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: baseline;
+                }
 
-                img {
+                .close {
                     position: absolute;
                     right: 1.5em;
                     top: 1.5em;
+                    @include respond-to('desktop'){
+                        display: none;
+                    }
                 }
 
                 ul {
@@ -27,7 +50,12 @@ body {
                     list-style: none;
                     padding: 0;
                     font-size: 1.1em;
-
+                    @include respond-to('desktop'){
+                        display: flex;
+                        margin-top: 0;
+                        margin-left: 2em;
+                        gap: 20px;
+                    }
                     li {
                         margin-bottom: 1em;
                         margin-left: 1em;
@@ -35,6 +63,9 @@ body {
                         a {
                             text-decoration: none;
                             color: $grey;
+                            @include respond-to('desktop'){
+                                color: $black;
+                            }
                         }
 
                         .drop {
@@ -46,6 +77,9 @@ body {
                                 height: 6px;
                                 margin-left: 13px;
                                 display: inline-block;
+                                @include respond-to('desktop'){
+                                    margin-left: 5px;
+                                }
                             }
                             &--up {
                                 background-image: url('../images/icon-arrow-up.svg');
@@ -55,33 +89,70 @@ body {
                                 height: 6px;
                                 margin-left: 13px;
                                 display: inline-block;
+                                @include respond-to('desktop'){
+                                    margin-left: 5px;
+                                }
                             }
                         }
 
                         .list {
                             display: none;
-
                             &--open {
                                 padding: 0;
                                 display: flex;
                                 margin-top: 1em;
                                 flex-flow: column;
                                 align-self:baseline ;
+                                @include respond-to('desktop'){
+                                   background-color: white;
+                                   box-shadow: 2px 2px 20px lightgray;
+                                    border-radius: 10px;
+                                    padding-bottom: 1em;
+                                    position:absolute;
+                                    gap: 0px;
+                                }
+                                li{
+                                    @include respond-to('desktop'){
+                                       margin: 1em 1.2em 0em 1em;
+                                     }
+                                }
                                 a {
                                     font-size: 0.9em;
                                     display: flex;
                                     gap: 22px;
                                     height: 20px;
                                     align-items: center;
+                                    @include respond-to('desktop'){
+                                        font-size: 0.8em;
+                                     }
+
                                 }
 
                                 img {
                                     position: inherit;
                                     height: 22px;
+                                    @include respond-to('desktop'){
+                                        height: 18px;
+                                     }
                                 }
                             }
 
                         }
+                    }
+                    .nav__item--features{
+                        @include respond-to('desktop'){
+                            ul{
+                                left: 60px;
+                            }
+                         }
+                        
+                    }
+                    .nav__item--compagny{
+                        @include respond-to('desktop'){
+                            ul{
+                                left: 230px;
+                            }
+                         }
                     }
                 }
 
@@ -91,16 +162,27 @@ body {
                     flex-flow: column wrap;
                     align-items: center;
                     gap: 1em;
-
+                    @include respond-to('desktop'){
+                        flex-flow: row;
+                        padding-top: 0;
+                    }
                     a {
                         text-decoration: none;
                         color: $grey;
+                        @include respond-to('desktop'){
+                            color: $black;
+                        }
                     }
 
                     :nth-child(2) {
                         border: 1px solid $black;
                         padding: 0.5em 4em;
                         border-radius: 16px;
+                        @include respond-to('desktop'){
+                            padding: 0.5em 1em;
+                            color: $black;
+                            margin-left: 2em;
+                        }
                     }
 
                 }
@@ -109,10 +191,16 @@ body {
     }
 }
 
-.nav--close {
-    header {
-        .nav {
-            display: none;
+.nav {
+    &--close{
+        header {
+            .nav {
+                display: none;
+                @include respond-to('desktop'){
+                    display: block;
+                }
+            }
         }
     }
+   
 }
