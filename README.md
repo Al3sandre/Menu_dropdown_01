@@ -55,8 +55,6 @@ Les utilisateurs doivent être en mesure de :
 Reprise en main de vue.js par les bases, et pratique de SASS. 
 
 
-### Développement continu
 
-Réalisation d'un projet de simplification pour le comptabilité d'une microentreprise. Ce challenge ma permis d'avoir une idée plus clair dans me recherche de techno pour réaliser de futut projet. 
 
 
